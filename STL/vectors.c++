@@ -40,3 +40,23 @@ int main() {
     defineVector();
     return 0;
 }
+
+
+
+//vector sort elements
+
+int main(){
+    int n;
+    cin >> n;
+    vector <int> v(n);
+    for(int i = 0 ; i < n ;i++){
+        cin >> v[i];
+    }
+    sort(v.begin() , v.end());
+    
+    //to iterate over the vector elements
+    for(int val : v){
+        cout << val << " ";
+    }
+    return 0;
+}
