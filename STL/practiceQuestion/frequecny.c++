@@ -33,6 +33,7 @@ int main(){
       minFreq = it.second;
       minElement = it.first;
     }
+    //for the max
     if(it.second > maxFreq){
       maxFreq = it.second;
       maxELement = it.first;
