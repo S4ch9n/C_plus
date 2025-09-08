@@ -23,6 +23,15 @@ class Car {
     int price;
 };
 
+// ------------------------------
+// Function to print Student details
+// ------------------------------
+// NOTE: Passed by value (copy of object is made)
+// If you want to modify the object, use "Student& s"
+void change(Student s) {
+  cout << s.name << " " << s.rollNum << " " << s.cgpa << endl;
+}
+
 int main() {
   // ------------------------------
   // Object : instance of a class
@@ -31,6 +40,7 @@ int main() {
   // Creating Student objects
   Student s1;  // object s1 of Student class
   Student s2;  // object s2 of Student class
+  Student s3;  // object s3 of Student class
 
   // Assigning values to s1
   s1.name = "Akash";
@@ -38,9 +48,14 @@ int main() {
   s1.cgpa = 9.6;
 
   // Assigning values to s2
-  s2.name = "Akash";   // (better to use a different student)
-  s2.rollNum = 23;
-  s2.cgpa = 9.6;
+  s2.name = "Suresh";
+  s2.rollNum = 25;
+  s2.cgpa = 9.3;
+
+  // Assigning values to s3
+  s3.name = "Rajesh";
+  s3.rollNum = 30;
+  s3.cgpa = 8.9;
 
   // Creating Car objects
   Car c1;  // object c1 of Car class
@@ -60,11 +75,12 @@ int main() {
   // Displaying object data
   // ------------------------------
 
-  // Printing Student details
-  cout << s1.name << " " << s1.rollNum << " " << s1.cgpa << endl;
-  cout << s2.name << " " << s2.rollNum << " " << s2.cgpa << endl;
+  // Printing Student details using function
+  change(s1);
+  change(s2);
+  change(s3);
 
-  // Printing Car details
+  // Printing Car details directly
   cout << c1.name << " " << c1.type << " " << c1.price << endl;
   cout << c2.name << " " << c2.type << " " << c2.price << endl;
 
