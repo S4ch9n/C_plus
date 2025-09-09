@@ -31,8 +31,8 @@ void merge(int arr[], int low, int mid, int high) {
     }
 
     // Copy sorted elements back into original array
-    for (int i = low; i <= high; i++) {
-        arr[i] = temp[i - low];
+    for (int k = 0; k <= high; k++) {
+        arr[left + k] = temp[k];
     }
 }
 
