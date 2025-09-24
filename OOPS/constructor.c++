@@ -32,18 +32,48 @@ class Student {
       rno = r;
       gpa = c;
     }
+    //mulitple constructor
+    Student(string s , int r){
+      name = s;
+      rno = r;
+    }
+
+    Student(string s){
+      name = s;
+    }
+
+    Student(int r , float g, string s){
+      name = s;
+      rno = r;
+      gpa = g;
+    }
 };
 
 int main() {
   // Creating an object with the parameterized constructor
   Student s1("Nick", 16, 9.2);
+  s1.gpa = 9.6;
 
   // When s1 is created, the constructor is automatically called
   // with ("Nick", 16, 9.2) as arguments
   // -> name = "Nick", rno = 16, gpa = 9.2
+  Student s2;
+  s2.name = "Himanshu";
+  s2.rno = 88;
+  s2.gpa = 6.2;
 
+  Student s3("Paras" , 13);
+
+  Student s4("Gagan");
+
+  Student s5(45 , 9.2 , "Akash");
   cout << s1.name << " " << s1.rno << " " << s1.gpa << endl;
+  cout << s2.name << " " << s2.rno << " " << s2.gpa << endl;
+  cout << s3.name << " " << s3.rno << endl;
+  cout << s4.name << endl;
+  cout << s5.name << " " << s5.rno << " " << s5.gpa << endl;
 
   return 0;
 }
-  
+
+
