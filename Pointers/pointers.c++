@@ -17,7 +17,7 @@ int main() {
     double *p2 = &d;
 
     cout << "Address is : " << p2 << endl;
-    cout << "Value is : " << p2 << endl;
+    cout << "Value is : " << *p2 << endl;
 
     cout << "Size of integer is " << sizeof(x) << endl;
     cout << "Size of pointer is " << sizeof(ptr) << endl;
@@ -54,7 +54,7 @@ int main() {
     cout << (*t)++ << endl;
     cout << *t << endl;
     cout << "before t " << t << endl;
-    t = t + 1;
+    t = t + 1; //Move pointer to next integer memory location.
     cout << "after t " << t << endl;
 
     return 0;
