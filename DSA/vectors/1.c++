@@ -10,7 +10,7 @@ int main()
   vector<int> v1;
 
   // declare vector with given size and value
-  vector<int> v2(1, 2);
+  vector<int> v2(3, 2); //create vector with 3 element and initialize each element with value 2
 
   // print items using range-based loop
   for (int x : v2){
