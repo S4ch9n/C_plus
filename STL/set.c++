@@ -42,6 +42,45 @@ void demonstrateSet() {
     }
     cout << endl;
 
+
+    set<int> s2 = {1,2,3,4,5};
+    //insert element
+    s2.insert(0);
+
+    //searching elements
+    //The find() function is used to check whether an element exists. It returns an iterator to the element if found, else returns end() if the element is not found.
+
+    //accessing elements using find()
+    auto it = s2.find(0);
+    if(it != s2.end()) cout << "element found : " << *it << endl;
+
+    //The count() function can also be used to check existence, returns 1 if the element is present, 0 otherwise.
+    //accessing element using count()
+    if(s2.count(2)) cout << "2 exists in the set" << endl;
+
+    //accessing all elements
+    cout << "All elements : ";
+    for(auto x : s2) cout << x << " ";
+
+    cout << endl;
+
+
+    //traversing using iterator
+    for(auto it = s2.begin() ; it != s2.end() ; ++it) cout << *it << " ";
+    cout << endl;
+
+    //deleting by value
+    s2.erase(5);
+
+    //deleting by iterator
+    s2.erase(s2.begin());
+
+    //traversing the set
+    cout << "After deleting the elements are : ";
+    for(auto it : s2) cout << it << " ";
+    cout << endl;
+
+
     // Check if an element exists
     int value = 20;
     if (mySet.find(value) != mySet.end()) {
@@ -50,7 +89,7 @@ void demonstrateSet() {
         cout << value << " is not found in the set." << endl;
     }
 
-    // Remove an element
+    // Remove an element by value
     mySet.erase(20);
 
     // Check if the element was removed
