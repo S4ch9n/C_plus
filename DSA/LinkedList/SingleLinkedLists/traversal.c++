@@ -65,6 +65,9 @@ bool search(Node* head){
   //search the node
   cout << search(head);
 
+
+  //insert at end
+
   
   return 0;
  };
